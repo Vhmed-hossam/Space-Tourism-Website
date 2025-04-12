@@ -29,6 +29,10 @@ export default function App() {
           path: "/technology",
           element: <Technology />,
         },
+        {
+          path: "*",
+          element: <Home />,
+        }
       ],
     },
   ]);
