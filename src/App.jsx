@@ -7,6 +7,7 @@ import Destinations from "./Pages/Destinations/destinations";
 import Crew from "./Pages/Crew/crew";
 import Technology from "./Pages/Technology/technology";
 import Aos from "aos";
+import { Navigate } from "react-router-dom";
 export default function App() {
   const spaceTourism = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ export default function App() {
         },
         {
           path: "*",
-          element: <Home />,
+          element: <Navigate to="/" replace />,
         }
       ],
     },
