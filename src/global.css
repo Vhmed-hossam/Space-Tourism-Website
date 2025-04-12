@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
 @import "tailwindcss";
+@import 'aos/dist/aos.css';
 
 body {
   margin: 0;
@@ -12,10 +13,43 @@ body {
 }
 
 @layer base {
-  :root{
+  :root {
     --font-barlow-condensed: 'Barlow Condensed';
     --font-barlow: 'Barlow';
     --font-bellefair: 'Bellefair';
   }
 }
 
+img {
+  user-select: none;
+}
+
+.bg-img {
+  background-image: url('../public/Images/Hi\ Res\ Render\ -\ 1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.font-barlow {
+  font-family: var(--font-barlow);
+}
+
+.font-barlow-condensed {
+  font-family: var(--font-barlow-condensed);
+}
+
+.font-bellefair {
+  font-family: var(--font-bellefair);
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
