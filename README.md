@@ -65,7 +65,3 @@
 <p align="center">© 2025 STW™ by Vhmed. All Rights Reserved.</p>
 
 ###
-
-<p align="left">Hello World!!</p>
-
-###
