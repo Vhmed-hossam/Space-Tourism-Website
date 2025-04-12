@@ -8,10 +8,6 @@ body {
   box-sizing: border-box;
 }
 
-* {
-  font-family: 'Bellefair';
-}
-
 @layer base {
   :root {
     --font-barlow-condensed: 'Barlow Condensed';
@@ -21,19 +17,14 @@ body {
 }
 
 img {
+  -webkit-user-drag: none;
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-.bg-img {
-  background-image: url('../public/Images/Hi\ Res\ Render\ -\ 1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+
 
 .font-barlow {
   font-family: var(--font-barlow);
@@ -52,4 +43,12 @@ html {
   height: 100vh;
   margin: 0;
   padding: 0;
+}
+
+.active {
+  border-bottom: 3px solid #fff;
+
+}
+.active-link{
+  border-right: 3px solid #fff;
 }

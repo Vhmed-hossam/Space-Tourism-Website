@@ -2,7 +2,7 @@ export const NavElements = [
   {
     id: 1,
     name: "Home",
-    link: "/home",
+    link: "/",
     count: "00",
   },
   {
