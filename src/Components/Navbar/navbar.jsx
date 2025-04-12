@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { NavElements } from "../../Constants/NavElements";
-import Menu from "../../Icons/Menu";
+import Menu from "../../Icons/icons";
 export default function NavBar() {
   const [Isnavsmall, setIsnavsmall] = useState(false);
 
