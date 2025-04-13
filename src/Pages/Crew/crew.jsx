@@ -27,7 +27,7 @@ export default function Crew() {
       <NavBar />
       <div className="flex flex-1 gap-2 items-center self-stretch flex-col px-10 py-12">
         <div
-          className="flex flex-col  flex-1 self-stretch text-white container mx-auto items-start gap-6"
+          className="flex flex-col flex-1 self-stretch text-white container mx-auto items-start gap-6"
           ref={formRef}
         >
           <div className="flex gap-3 uppercase items-center justify-start font-barlow-condensed">
