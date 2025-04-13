@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Sphere from "../../Components/Sphere/sphere";
 import NavBar from "../../Components/Navbar/navbar";
+import { HomeData } from "../../Constants/Home";
 export default function Home() {
   const formRef = useRef(null);
   const sphereRef = useRef(null);
@@ -30,16 +31,13 @@ export default function Home() {
           >
             <div className="flex flex-1 flex-col gap-6 text-center md:text-left">
               <h2 className="font-barlow-condensed text-[28px] uppercase tracking-wide">
-                So, you want to travel to
+                {HomeData.subtitle}
               </h2>
               <h1 className="font-bellefair text-[80px] uppercase md:text-[100px]">
-                Space
+                {HomeData.title}
               </h1>
               <p className="font-barlow text-[15px] leading-[180%] md:max-w-[400px]">
-                Let’s face it; if you want to go to space, you might as well
-                genuinely go to outer space and not hover kind of on the edge of
-                it. Well, sit back, and relax because we’ll give you a truly out
-                of this world experience!
+                {HomeData.p}
               </p>
             </div>
             <div
