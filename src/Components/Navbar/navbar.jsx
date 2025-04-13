@@ -94,6 +94,7 @@ export default function NavBar() {
                       isActive ? "active-link" : "selected-link"
                     }`
                   }
+                  onClick={() => setIsOpen(false)}
                 >
                   <div>
                     <h2 className="font-barlow-condensed text-lg">
