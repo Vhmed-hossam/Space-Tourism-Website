@@ -9,13 +9,11 @@ import {
   planetAnimationSettings,
   textAnimationSettings,
 } from "../../Animations/Destination";
+import { PYD } from "../../static/Destination";
 export default function Destinations() {
   const [Planet, setPlanet] = useState("Moon");
 
-  const PYD = {
-    count: "01",
-    text: "pick your destination",
-  };
+
   const formRef = useRef(null);
 
   useGSAP(() => {
@@ -42,9 +40,8 @@ export default function Destinations() {
             <span className="opacity-25 text-lg">{PYD.count}</span>
             <h2 className="text-lg tracking-wider">{PYD.text}</h2>
           </div>
-
           <div className="flex self-stretch flex-wrap max-md:flex-col gap-12 flex-1 items-center">
-            <div className="flex-1 self-stretch justify-center items-center flex ">
+            <div className="flex-1 self-stretch justify-center items-center flex">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={Planet}
