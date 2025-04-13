@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Sphere from "../../Components/Sphere/sphere";
 import NavBar from "../../Components/Navbar/navbar";
-import { HomeData } from "../../Constants/Home";
+import { HomeData } from "../../static/Home";
 export default function Home() {
   const formRef = useRef(null);
   const sphereRef = useRef(null);
