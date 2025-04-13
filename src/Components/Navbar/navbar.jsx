@@ -21,7 +21,7 @@ export default function NavBar() {
   }, []);
   return (
     <>
-      <header className="relative">
+      <header className="relative select-none">
         <nav className="flex justify-center w-full">
           <div className="flex pt-10 items-center w-full -gap-8">
             <div className="flex gap-16 items-center ps-[60px] flex-1">
