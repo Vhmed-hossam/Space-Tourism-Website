@@ -52,3 +52,17 @@ html {
 .active-link{
   border-right: 3px solid #fff;
 }
+::selection {
+  background: #0B0D17;
+  color: #D0D6F9;
+}
+
+::-moz-selection {
+  background: #0B0D17;
+  color: #D0D6F9;
+}
+
+::-webkit-selection {
+  background: #0B0D17;
+  color: #D0D6F9;
+}
