@@ -9,7 +9,7 @@
     flex-direction: column;
   }
   
-  @media (max-width: 650px) {
+  @media (max-width: 768px) {
     .bg-img {
       background-image: url('../Images/Render 1-mobile.png');
     }
