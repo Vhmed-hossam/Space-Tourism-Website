@@ -3,6 +3,7 @@ import "./home.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Sphere from "../../Components/Sphere/sphere";
+import NavBar from "../../Components/Navbar/navbar";
 export default function Home() {
   const formRef = useRef(null);
   const sphereRef = useRef(null);
@@ -19,29 +20,34 @@ export default function Home() {
       );
   });
   return (
-    <div className="h-screen bg-cover bg-center bg-no-repeat bg-img1 text-white flex items-center justify-center">
-      <div className=" flex items-center self-stretch flex-col gap-12 container mx-auto px-10">
-        <div
-          ref={formRef}
-          className="pt-25 max-sm:pt-0 flex-1 flex max-md:flex-col max-md:items-center max-md:gap-6 sm:mt-12 justify-between align-center w-full"
-        >
-          <div className="flex flex-wrap flex-col gap-6 flex-1 max-md:text-center">
-            <h2 className="uppercase text-[28px] font-barlow-condensed">
-              So, you want to travel to
-            </h2>
-            <h1 className="text-[80px] font-bellefair uppercase">Space</h1>
-            <p className="text-[15px]/[180%] font-barlow">
-              Let’s face it; if you want to go to space, you might as well
-              genuinely go to outer space and not hover kind of on the edge of
-              it. Well sit back, and relax because we’ll give you a truly out of
-              this world experience!
-            </p>
-          </div>
+    <div className="min-h-screen bg-img1 bg-cover bg-center">
+      <NavBar />
+      <div className="flex flex-1 items-center justify-center text-white">
+        <div className="container mx-auto flex flex-col gap-12 px-4 sm:px-6 lg:px-10">
           <div
-            className="flex-1 flex flex-col pt-20 justify-center self-stretch max-md:items-center items-end gap-6"
-            ref={sphereRef}
+            ref={formRef}
+            className="flex w-full container mx-auto px-6 flex-1 flex-col items-center justify-between gap-6 sm:mt-12 md:flex-row"
           >
-            <Sphere />
+            <div className="flex flex-1 flex-col gap-6 text-center md:text-left">
+              <h2 className="font-barlow-condensed text-[28px] uppercase tracking-wide">
+                So, you want to travel to
+              </h2>
+              <h1 className="font-bellefair text-[80px] uppercase md:text-[100px]">
+                Space
+              </h1>
+              <p className="font-barlow text-[15px] leading-[180%] md:max-w-[400px]">
+                Let’s face it; if you want to go to space, you might as well
+                genuinely go to outer space and not hover kind of on the edge of
+                it. Well, sit back, and relax because we’ll give you a truly out
+                of this world experience!
+              </p>
+            </div>
+            <div
+              ref={sphereRef}
+              className="flex flex-1 flex-col items-center justify-center md:items-end"
+            >
+              <Sphere />
+            </div>
           </div>
         </div>
       </div>
