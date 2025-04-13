@@ -10,12 +10,12 @@ export default function Home() {
     gsap.fromTo(
       formRef.current,
       { opacity: 0, y: 100 },
-      { opacity: 1, duration: 1, ease: "power1.out", y: 0 }
+      { opacity: 1, duration: 0.7, ease: "power1.out", y: 0 }
     ),
       gsap.fromTo(
         sphereRef.current,
         { opacity: 0, y: 70 },
-        { opacity: 1, duration: 1, delay: 0.3, ease: "power1.out", y: 0 }
+        { opacity: 1, duration: 0.7, delay: 0.4, ease: "power1.out", y: 0 }
       );
   });
   return (
@@ -23,7 +23,7 @@ export default function Home() {
       <div className=" flex items-center self-stretch flex-col gap-12 container mx-auto px-10">
         <div
           ref={formRef}
-          className=" flex-1 flex max-md:flex-col max-md:items-center max-md:gap-6 sm:mt-12 justify-between align-center w-full"
+          className="pt-25 max-sm:pt-0 flex-1 flex max-md:flex-col max-md:items-center max-md:gap-6 sm:mt-12 justify-between align-center w-full"
         >
           <div className="flex flex-wrap flex-col gap-6 flex-1 max-md:text-center">
             <h2 className="uppercase text-[28px] font-barlow-condensed">

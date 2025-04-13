@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavElements } from "../../Constants/NavElements";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { X } from "lucide-react";
 import { Menu } from "lucide-react";
 
@@ -26,7 +26,7 @@ export default function NavBar() {
           <div className="flex pt-10 items-center w-full -gap-8">
             <div className="flex gap-16 items-center ps-[60px] flex-1">
               <img src="/Logo/Logo.png" alt="Space Tourism" />
-              <span className="p-[1px] bg-[#4A4B55] min-h-1px w-full "></span>
+              <span className="p-[1px] bg-[#4A4B55] min-h-1px w-full" />
             </div>
             <div className="w-full px-14 lg:flex-1  gap-12 backdrop-blur-2xl bg-[rgba(255, 255, 255, 0.05)] rounded-md flex justify-end pe-14 text-white items-center">
               {Isnavsmall ? (
@@ -62,7 +62,7 @@ export default function NavBar() {
         </nav>
       </header>
       <div
-        className={`fixed top-0 right-0 h-screen w-full transition-transform duration-500 ${
+        className={`fixed top-0 right-0 h-screen w-full transition-transform duration-500 z-1 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -84,7 +84,7 @@ export default function NavBar() {
                 <X className="size-8" />
               </button>
             </div>
-            <div className="flex flex-col gap-8 ps-12 pe-1 text-white">
+            <div className="flex  flex-col gap-8 ps-12 pe-1 text-white">
               {NavElements.map((nav) => (
                 <NavLink
                   to={nav.link}
