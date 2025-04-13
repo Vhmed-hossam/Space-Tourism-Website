@@ -83,7 +83,7 @@ export default function Destinations() {
                     {currentPlanetData.title}
                   </motion.h1>
                   <motion.p
-                    className="text-[#D0D6F9] text-base w-full font-barlow max-md:text-center max-w-md min-h-[120px]"
+                    className="text-[#D0D6F9] text-base w-full max-w-xl font-barlow max-md:text-center min-h-[120px]"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3, duration: 0.5 }}

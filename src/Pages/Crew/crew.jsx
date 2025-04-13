@@ -22,11 +22,6 @@ export default function Crew() {
       { opacity: 1, duration: 0.7, ease: "power1.out", y: 0 }
     );
   });
-
-  const handleDotClick = (index) => {
-    setCrewIndex(index);
-  };
-
   return (
     <div className="bg-img3 h-auto overflow-hidden transition-all">
       <NavBar />
@@ -83,7 +78,7 @@ export default function Crew() {
                   {CrewText.map((_, index) => (
                     <span
                       key={index}
-                      onClick={() => handleDotClick(index)}
+                      onClick={() => {setCrewIndex(index);}}
                       className={`w-[10px] h-[10px] bg-white rounded-full cursor-pointer transition-opacity ${
                         index === crewIndex ? "opacity-100" : "opacity-25"
                       }`}
