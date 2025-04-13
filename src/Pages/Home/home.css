@@ -10,7 +10,7 @@
   }
   
   @media (max-width: 768px) {
-    .bg-img {
+    .bg-img1 {
       background-image: url('../Images/Render 1-mobile.png');
     }
   }
