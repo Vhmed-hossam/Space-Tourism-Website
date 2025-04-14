@@ -3,7 +3,6 @@ import { NavElements } from "../../Constants/NavElements";
 import { NavLink } from "react-router-dom";
 import { X } from "lucide-react";
 import { Menu } from "lucide-react";
-
 export default function NavBar() {
   const [Isnavsmall, setIsnavsmall] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +24,7 @@ export default function NavBar() {
         <nav className="flex justify-center w-full">
           <div className="flex pt-10 items-center w-full -gap-8">
             <div className="flex gap-16 items-center ps-[60px] flex-1">
-              <img src="/Logo/Logo.png" alt="Space Tourism" />
+              <img src="/Logo/Logo.png" alt="Space Tourism" loading="lazy" />
               <span className="p-[1px] bg-[#4A4B55] min-h-1px w-full" />
             </div>
             <div className="w-full px-14 lg:flex-1  gap-12 backdrop-blur-2xl bg-[rgba(255, 255, 255, 0.05)] rounded-md flex justify-end pe-14 text-white items-center">

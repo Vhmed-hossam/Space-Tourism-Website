@@ -96,6 +96,7 @@ export default function Crew() {
                   src={CrewText[crewIndex].image}
                   alt={CrewText[crewIndex].crew}
                   className="object-contain max-h-[600px]"
+                  loading="lazy"
                   {...CrewAnimationSettings}
                 />
               </AnimatePresence>

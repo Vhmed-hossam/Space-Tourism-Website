@@ -47,6 +47,7 @@ export default function Destinations() {
                   src={currentPlanetData.image}
                   alt={Planet}
                   className=" object-contain sm:size-full max-h-[500px]"
+                  loading="lazy"
                   {...planetAnimationSettings}
                 />
               </AnimatePresence>
