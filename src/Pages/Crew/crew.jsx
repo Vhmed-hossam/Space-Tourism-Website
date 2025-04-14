@@ -23,7 +23,7 @@ export default function Crew() {
     );
   });
   return (
-    <div className="bg-img3 h-auto overflow-hidden transition-all" loading="lazy">
+    <div className="bg-img3 h-auto overflow-hidden transition-all">
       <NavBar />
       <div className="flex flex-1 gap-2 items-center self-stretch flex-col px-10 py-12">
         <div
@@ -34,16 +34,16 @@ export default function Crew() {
             <span className="opacity-25 text-lg">{MYC.count}</span>
             <h2 className="text-lg tracking-wider">{MYC.text}</h2>
           </div>
-          <div className="flex self-stretch flex-wrap max-md:flex-col gap-12 flex-1 items-center">
-            <div className="flex-1 py-8  max-md:ps-0 max-md:py-0 max-md:text-center ps-7 self-stretch flex flex-col items-start justify-center">
+          <div className="flex self-stretch  px-0.5 flex-wrap max-md:flex-col gap-12 flex-1 items-center">
+            <div className="flex-1 max-md:ps-0 max-md:py-0 max-md:text-center ps-7 self-stretch flex flex-col items-start justify-center">
               <div className="flex-1 max-md:mt-6 self-stretch justify-start items-center flex">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={crewIndex}
-                    className="flex flex-col gap-6 items-start w-full"
+                    className="flex flex-col gap-6 items-start max-md:items-center w-full"
                     {...textAnimationSettings}
                   >
-                    <motion.div className="gap-1 max-md:text-center w-full">
+                    <motion.div className="gap-1 max-md:text-center">
                       {" "}
                       <motion.h3
                         className="text-[#8F9095] text-xl font-bellefair uppercase opacity-50 w-full"
@@ -54,7 +54,7 @@ export default function Crew() {
                         {CrewText[crewIndex].role}
                       </motion.h3>
                       <motion.h1
-                        className="text-white w-full text-5xl font-bellefair uppercase"
+                        className="text-white w-full text-5xl max-md:text-center font-bellefair uppercase"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
@@ -89,15 +89,18 @@ export default function Crew() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 self-stretch justify-center items-center flex">
+            <div className="flex-1 self-stretch justify-center items-end flex min-h-[550px] max-h-[650px]">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={crewIndex}
                   src={CrewText[crewIndex].image}
                   alt={CrewText[crewIndex].crew}
-                  className="object-contain max-h-[600px]"
+                  className="object-contain h-full max-h-[650px] transition-all duration-500 ease-in-out"
                   loading="lazy"
-                  {...CrewAnimationSettings}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
                 />
               </AnimatePresence>
             </div>
