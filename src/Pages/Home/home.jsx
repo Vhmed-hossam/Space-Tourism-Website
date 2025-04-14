@@ -21,7 +21,7 @@ export default function Home() {
       );
   });
   return (
-    <div className="min-h-screen bg-img1 overflow-hidden">
+    <div className="min-h-screen bg-img1 overflow-hidden" loading="lazy">
       <NavBar />
       <div className="flex flex-1 items-center justify-center text-white">
         <div className="container mx-auto flex flex-col gap-12 px-4 sm:px-6 lg:px-10">

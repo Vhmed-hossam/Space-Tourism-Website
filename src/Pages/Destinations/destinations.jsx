@@ -28,7 +28,7 @@ export default function Destinations() {
   );
 
   return (
-    <div className="bg-img2 h-auto overflow-hidden">
+    <div className="bg-img2 h-auto overflow-hidden" loading="lazy">
       <NavBar />
       <div className="flex flex-1 gap-2 items-center self-stretch flex-col px-10 py-12">
         <div

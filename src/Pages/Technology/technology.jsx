@@ -23,7 +23,7 @@ export default function Technology() {
   }, []);
 
   return (
-    <div className="bg-img4 h-auto overflow-hidden">
+    <div className="bg-img4 h-auto overflow-hidden" loading="lazy">
       <NavBar />
       <div className="flex py-12 flex-col items-end gap-2 flex-1 self-stretch">
         <div

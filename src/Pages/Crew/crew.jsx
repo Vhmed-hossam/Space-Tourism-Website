@@ -23,7 +23,7 @@ export default function Crew() {
     );
   });
   return (
-    <div className="bg-img3 h-auto overflow-hidden transition-all">
+    <div className="bg-img3 h-auto overflow-hidden transition-all" loading="lazy">
       <NavBar />
       <div className="flex flex-1 gap-2 items-center self-stretch flex-col px-10 py-12">
         <div
