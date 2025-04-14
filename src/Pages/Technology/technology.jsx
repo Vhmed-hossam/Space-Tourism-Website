@@ -96,7 +96,7 @@ export default function Technology() {
               >
                 <motion.img
                   src={TechnologyData[Techindex].image}
-                  className="w-full h-full object-cover max-w-[600px] max-h-[600px]"
+                  className="w-full h-full object-cover rounded-lg max-w-[600px] max-h-[600px]"
                   loading="lazy"
                   {...footageAnimationSettings}
                 />
