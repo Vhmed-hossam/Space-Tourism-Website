@@ -4,27 +4,33 @@ import "./tech.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SL101, TechNumbers } from "../../static/technology";
-import { TechnologyData } from "../../Constants/Texhnology";
+import { TechnologyData } from "../../Constants/Technology";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  footageAnimationSettings,
+  textAnimationSettings,
+} from "../../Animations/Technology";
+
 export default function Technology() {
   const [Techindex, setTechindex] = useState(0);
   const formRef = useRef(null);
-
   useGSAP(() => {
     gsap.fromTo(
       formRef.current,
       { opacity: 0, y: 40 },
-      { opacity: 1, duration: 0.7, ease: "power1.out", y: 0 }
+      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
     );
-  });
+  }, []);
+
   return (
     <div className="bg-img4 h-auto overflow-hidden">
       <NavBar />
       <div className="flex py-12 flex-col items-end gap-2 flex-1 self-stretch">
         <div
           ref={formRef}
-          className="flex-1 flex gap-6 flex-col items-start max-md:ms-0 ms-[80px] text-white"
+          className="flex-1 flex gap-6 flex-col items-start max-md:ms-0  ms-[80px] text-white"
         >
-          <div className="flex gap-3 uppercase items-center  justify-start font-barlow-condensed">
+          <div className="flex gap-3 uppercase items-center justify-start font-barlow-condensed max-md:ms-8">
             <span className="opacity-25 text-lg">{SL101.count}</span>
             <h2 className="text-lg tracking-wider">{SL101.text}</h2>
           </div>
@@ -35,33 +41,66 @@ export default function Technology() {
                   {TechNumbers.map((item, index) => (
                     <button
                       key={index}
-                      className="bg-white border border-transparent flex size-20 rounded-full flex-col justify-center items-center text-black"
+                      className={`border transition-all border-transparent flex size-20 rounded-full flex-col justify-center items-center ${
+                        index === Techindex
+                          ? "bg-white text-black"
+                          : "border-[#383B4B] text-white"
+                      }`}
+                      onClick={() => setTechindex(index)}
                     >
                       {item.number}
                     </button>
                   ))}
                 </div>
-                <div className="flex flex-col gap-6 flex-1 justify-center items-start text-center  ">
-                  <div className="flex flex-col items-start self-stretch gap-4">
-                    <h2 className="text-[#8F9095] text-xl font-bellefair uppercase opacity-50 max-md:w-full">
-                      The terminology...
-                    </h2>
-                    <h1 className="text-4xl font-bellefair uppercase w-full max-md:text-center text-start">
-                      {TechnologyData[Techindex].title}
-                    </h1>
-                  </div>
-                  <p className="font-barlow text-[#D0D6F9]">
-                    {TechnologyData[Techindex].p}
-                  </p>
-                </div>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={`text-${Techindex}`}
+                    className="flex flex-col gap-6 flex-1 justify-center items-start"
+                    {...textAnimationSettings}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                  >
+                    <motion.div className="flex flex-col items-start self-stretch gap-4">
+                      <motion.h2
+                        className="text-[#8F9095] text-xl font-bellefair uppercase opacity-50 max-md:w-full max-md:text-center"
+                        {...textAnimationSettings}
+                      >
+                        The terminology...
+                      </motion.h2>
+                      <motion.h1
+                        className="text-4xl font-bellefair uppercase w-full max-md:text-center text-start"
+                        {...textAnimationSettings}
+                      >
+                        {TechnologyData[Techindex].title}
+                      </motion.h1>
+                    </motion.div>
+                    <motion.p
+                      className="font-barlow text-[#D0D6F9] max-md:text-center max-md:px-6 max-md:min-h-[96px]"
+                      {...textAnimationSettings}
+                    >
+                      {TechnologyData[Techindex].p}
+                    </motion.p>
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
-            <div className="flex flex-1 self-stretch items-center">
-              <img
-                src={TechnologyData[Techindex].image}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`image-${Techindex}`}
+                className="flex flex-1 self-stretch items-center"
+                {...footageAnimationSettings}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              >
+                <motion.img
+                  src={TechnologyData[Techindex].image}
+                  className="w-full h-full object-cover"
+                  {...footageAnimationSettings}
+                />
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </div>
