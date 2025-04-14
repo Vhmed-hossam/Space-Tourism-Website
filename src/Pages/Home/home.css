@@ -1,16 +1,16 @@
 .bg-img1 {
-    background-image: url('../Images/Hi\ Res\ Render\ -\ 1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  background-image: url('../Images/Hi\ Res\ Render\ -\ 1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .bg-img1 {
+    background-image: url('../Images/Render 1-mobile.png');
   }
-  
-  @media (max-width: 768px) {
-    .bg-img1 {
-      background-image: url('../Images/Render 1-mobile.png');
-    }
-  }
+}

@@ -49,9 +49,11 @@ html {
   border-bottom: 3px solid #fff;
 
 }
-.active-link{
+
+.active-link {
   border-right: 3px solid #fff;
 }
+
 ::selection {
   background: #0B0D17;
   color: #D0D6F9;

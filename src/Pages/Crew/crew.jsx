@@ -78,7 +78,9 @@ export default function Crew() {
                   {CrewText.map((_, index) => (
                     <span
                       key={index}
-                      onClick={() => {setCrewIndex(index);}}
+                      onClick={() => {
+                        setCrewIndex(index);
+                      }}
                       className={`w-[10px] h-[10px] bg-white rounded-full cursor-pointer transition-opacity ${
                         index === crewIndex ? "opacity-100" : "opacity-25"
                       }`}

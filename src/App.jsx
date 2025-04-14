@@ -24,7 +24,7 @@ export default function App() {
         },
         {
           path: "/crew",
-          element: <Crew/>,
+          element: <Crew />,
         },
         {
           path: "/technology",
@@ -33,7 +33,7 @@ export default function App() {
         {
           path: "*",
           element: <Navigate to="/" replace />,
-        }
+        },
       ],
     },
   ]);

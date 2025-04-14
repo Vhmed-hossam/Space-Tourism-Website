@@ -13,7 +13,6 @@ import { PYD } from "../../static/Destination";
 export default function Destinations() {
   const [Planet, setPlanet] = useState("Moon");
 
-
   const formRef = useRef(null);
 
   useGSAP(() => {
