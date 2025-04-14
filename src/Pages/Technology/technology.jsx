@@ -41,10 +41,10 @@ export default function Technology() {
                   {TechNumbers.map((item, index) => (
                     <button
                       key={index}
-                      className={`border transition-all border-transparent flex size-20 rounded-full flex-col justify-center items-center ${
+                      className={`border  transition-all flex size-20 rounded-full flex-col justify-center items-center ${
                         index === Techindex
-                          ? "bg-white text-black"
-                          : "border-[#383B4B] text-white"
+                          ? "bg-white text-black border-transparent"
+                          : "border-[#383B4B] text-white hover:border-white duration-700 cursor-pointer"
                       }`}
                       onClick={() => setTechindex(index)}
                     >
