@@ -15,7 +15,6 @@ export default function Loader() {
         fontSize: "2rem",
       }}
     >
-      <div className="spinner"/>
       <h2 className="textm-md font-bellefair">Loading...</h2>
     </div>
   );
