@@ -10,8 +10,8 @@ import {
 import "./crew.css";
 import { MYC } from "../../static/Crew";
 import { CrewText } from "../../Constants/Crewtext";
-import { ChevronRight } from 'lucide-react';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronRight } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 
 export default function Crew() {
   const [crewIndex, setCrewIndex] = useState(0);
@@ -77,9 +77,14 @@ export default function Crew() {
               </div>
               <div className="flex self-stretch gap-2 flex-col items-start justify-center pb-12">
                 <div className="flex w-full items-center gap-3 mt-8 max-md:justify-center">
-                <ChevronLeft className="text-white w-6 h-6 cursor-pointer" onClick={()=> {
-                  setCrewIndex(crewIndex === 0 ? CrewText.length - 1 : crewIndex - 1);
-                }} />
+                  <ChevronLeft
+                    className="text-white w-6 h-6 cursor-pointer"
+                    onClick={() => {
+                      setCrewIndex(
+                        crewIndex === 0 ? CrewText.length - 1 : crewIndex - 1
+                      );
+                    }}
+                  />
                   {CrewText.map((_, index) => (
                     <span
                       key={index}
@@ -91,9 +96,14 @@ export default function Crew() {
                       }`}
                     />
                   ))}
-                    <ChevronRight className="text-white w-6 h-6 cursor-pointer" onClick={() => {
-                      setCrewIndex(crewIndex === CrewText.length - 1 ? 0 : crewIndex + 1);
-                    }}/>
+                  <ChevronRight
+                    className="text-white w-6 h-6 cursor-pointer"
+                    onClick={() => {
+                      setCrewIndex(
+                        crewIndex === CrewText.length - 1 ? 0 : crewIndex + 1
+                      );
+                    }}
+                  />
                 </div>
               </div>
             </div>

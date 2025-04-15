@@ -27,7 +27,7 @@ export default function Home() {
         <div className="container mx-auto flex flex-col gap-12 px-4 sm:px-6 lg:px-10">
           <div
             ref={formRef}
-            className="flex w-full container mx-auto px-6 flex-1 flex-col items-center justify-between gap-6 sm:mt-12 md:flex-row"
+            className="flex w-full container mx-auto px-6  flex-1 flex-col items-center justify-between gap-6 sm:mt-12 md:flex-row"
           >
             <div className="flex flex-1 flex-col gap-6 text-center md:text-left">
               <h2 className="font-barlow-condensed text-[28px] uppercase tracking-wide">
@@ -42,7 +42,7 @@ export default function Home() {
             </div>
             <div
               ref={sphereRef}
-              className="flex flex-1 flex-col items-center justify-center md:items-end"
+              className="flex flex-1 flex-col items-center justify-center md:items-end max-md:mt-4"
             >
               <Sphere />
             </div>

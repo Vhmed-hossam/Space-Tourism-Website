@@ -1,0 +1,18 @@
+export const imageList = [
+    "/Images/Hi Res Render - 1.png",
+    "/Images/Hi Res Render - 2.png",
+    "/Images/Hi Res Render - 3.png",
+    "/Images/Hi Res Render - 4.png",
+    "/Extra/Crew/Crew 1.png",
+    "/Extra/Crew/Crew 2.png",
+    "/Extra/Crew/Crew 3.png",
+    "/Extra/Crew/Crew 4.png",
+    "/Extra/Tech/Technology Image - A.jpg",
+    "/Extra/Tech/Technology Image - B.jpg",
+    "/Extra/Tech/Technology Image - C.jpg",
+    "/Kit/Destination - A - Moon.png",
+    "/Kit/Destination - B - Mars.png",
+    "/Kit/Destination - C - Europa.png",
+    "/Kit/Destination - D - Titan.png",
+    "/Logo/Logo.png",
+  ];
