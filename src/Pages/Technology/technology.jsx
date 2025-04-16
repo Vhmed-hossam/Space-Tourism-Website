@@ -34,7 +34,7 @@ export default function Technology() {
             <span className="opacity-25 text-lg">{SL101.count}</span>
             <h2 className="text-lg tracking-wider">{SL101.text}</h2>
           </div>
-          <div className="self-stretch flex-1 max-md:flex-col-reverse flex gap-[32px]">
+          <div className="self-stretch min-h-[580px] flex-1 max-md:flex-col-reverse max-sm:min-h-[700px] flex gap-[32px]">
             <div className="flex flex-1 items-center gap-8">
               <div className="flex gap-8 items-start max-md:flex-col">
                 <div className="flex flex-col gap-8 max-md:my-6 items-start max-md:flex-row max-md:mx-auto">

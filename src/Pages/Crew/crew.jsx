@@ -45,10 +45,10 @@ export default function Crew() {
                     className="flex flex-col gap-6 items-start max-md:items-center w-full"
                     {...textAnimationSettings}
                   >
-                    <motion.div className="gap-1 max-md:text-center">
+                    <motion.div className="gap-1 max-md:text-center ">
                       {" "}
                       <motion.h3
-                        className="text-[#8F9095] text-xl font-bellefair uppercase opacity-50 w-full"
+                        className="text-[#8F9095] text-xl font-bellefair max-md:text-md uppercase opacity-50 w-full"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.1, duration: 0.5 }}
@@ -56,7 +56,7 @@ export default function Crew() {
                         {CrewText[crewIndex].role}
                       </motion.h3>
                       <motion.h1
-                        className="text-white w-full text-5xl max-md:text-center font-bellefair uppercase"
+                        className="text-white w-full text-5xl max-md:text-center max-md:text-3xl font-bellefair uppercase"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
@@ -65,7 +65,7 @@ export default function Crew() {
                       </motion.h1>
                     </motion.div>
                     <motion.p
-                      className="text-[#D0D6F9] text-base w-full font-barlow max-w-xl"
+                      className="text-[#D0D6F9] text-base max-sm:text-sm w-full font-barlow max-w-xl"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.3, duration: 0.5 }}
