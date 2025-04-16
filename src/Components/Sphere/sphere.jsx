@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HomeData } from "../../static/Home";
+import { HomeData } from "../../static/HomeText";
 
 export default function Sphere() {
   return (

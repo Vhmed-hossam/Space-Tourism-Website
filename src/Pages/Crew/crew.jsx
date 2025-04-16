@@ -6,10 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   CrewAnimationSettings,
   textAnimationSettings,
-} from "../../Animations/Crew";
+} from "../../Animations/CrewA";
 import "./crew.css";
-import { MYC } from "../../static/Crew";
-import { CrewText } from "../../Constants/Crewtext";
+import { MYC } from "../../static/CrewText";
+import { CrewText } from "../../Constants/CrewData";
 import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
 

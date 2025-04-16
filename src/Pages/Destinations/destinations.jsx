@@ -2,14 +2,14 @@ import React, { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import NavBar from "../../Components/Navbar/navbar";
-import { Destinationtext } from "../../Constants/Destinationtext";
+import { Destinationtext } from "../../Constants/DestinationData";
 import { motion, AnimatePresence } from "framer-motion";
 import "./destination.css";
 import {
   planetAnimationSettings,
   textAnimationSettings,
-} from "../../Animations/Destination";
-import { PYD } from "../../static/Destination";
+} from "../../Animations/DestinationA";
+import { PYD } from "../../static/DestinationText";
 export default function Destinations() {
   const [Planet, setPlanet] = useState("Moon");
 

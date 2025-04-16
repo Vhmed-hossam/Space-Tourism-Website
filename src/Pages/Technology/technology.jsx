@@ -3,13 +3,13 @@ import NavBar from "../../Components/Navbar/navbar";
 import "./tech.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { SL101, TechNumbers } from "../../static/technology";
-import { TechnologyData } from "../../Constants/Technology";
+import { SL101, TechNumbers } from "../../static/TechnologyText";
+import { TechnologyData } from "../../Constants/TechnologyData";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   footageAnimationSettings,
   textAnimationSettings,
-} from "../../Animations/Technology";
+} from "../../Animations/TechnologyA";
 
 export default function Technology() {
   const [Techindex, setTechindex] = useState(0);
