@@ -1,6 +1,3 @@
-import React, { useRef, useState } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import NavBar from "../../Components/Navbar/navbar";
 import { Destinationtext } from "../../Constants/DestinationData";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,22 +7,10 @@ import {
   textAnimationSettings,
 } from "../../Animations/DestinationA";
 import { PYD } from "../../static/DestinationText";
+import useDestinationstates from "../../Hooks/useDestinationstates";
 export default function Destinations() {
-  const [Planet, setPlanet] = useState("Moon");
-
-  const formRef = useRef(null);
-
-  useGSAP(() => {
-    gsap.fromTo(
-      formRef.current,
-      { opacity: 0, y: 40 },
-      { opacity: 1, duration: 0.7, ease: "power1.out", y: 0 }
-    );
-  });
-
-  const currentPlanetData = Destinationtext.find(
-    (dest) => dest.title.toLowerCase() === Planet.toLowerCase()
-  );
+  const { Planet, setPlanet, formRef, currentPlanetData } =
+    useDestinationstates();
 
   return (
     <div className="bg-img2 h-auto overflow-hidden" loading="lazy">

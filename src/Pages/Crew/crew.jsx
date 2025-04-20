@@ -1,6 +1,3 @@
-import React, { useRef, useState } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import NavBar from "../../Components/Navbar/navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import {
