@@ -5,12 +5,12 @@ import { X } from "lucide-react";
 import { Menu } from "lucide-react";
 import useNavResizing from "../../Hooks/useNavResizing";
 export default function NavBar() {
-const { Isnavsmall, isOpen, setIsOpen} = useNavResizing();
+  const { Isnavsmall, isOpen, setIsOpen } = useNavResizing();
   return (
     <>
-      <header className="relative select-none">
+      <header className="relative select-none ">
         <nav className="flex justify-center w-full">
-          <div className="flex pt-10 items-center w-full -gap-8">
+          <div className="flex md:pt-10 items-center w-full ">
             <div className="flex gap-16 items-center ps-[60px] flex-1">
               <img src="/Logo/Logo.png" alt="Space Tourism" loading="lazy" />
               <span className="p-[1px] bg-[#4A4B55] min-h-1px w-full" />
@@ -36,7 +36,7 @@ const { Isnavsmall, isOpen, setIsOpen} = useNavResizing();
                       className={`h-[96px] flex duration-700 flex-col hover:border-gray-500 border-b-3 transition-all items-start gap-2 justify-center border-transparent`}
                     >
                       <div>
-                        <h2 className="font-barlow-condensed text-lg">
+                        <h2 className="font-barlow-condensed text-lg tracking-wide">
                           {nav.count} {nav.name}
                         </h2>
                       </div>
