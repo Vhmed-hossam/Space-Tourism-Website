@@ -10,32 +10,25 @@ import {
   footageAnimationSettings,
   textAnimationSettings,
 } from "../../Animations/TechnologyA";
+import useTechStates from "../../Hooks/useTechStates";
 
 export default function Technology() {
-  const [Techindex, setTechindex] = useState(0);
-  const formRef = useRef(null);
-  useGSAP(() => {
-    gsap.fromTo(
-      formRef.current,
-      { opacity: 0, y: 40 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
-    );
-  }, []);
+  const { Techindex, setTechindex, formRef } = useTechStates();
 
   return (
     <div className="bg-img4 h-auto overflow-hidden" loading="lazy">
       <NavBar />
-      <div className="flex py-12 flex-col items-end gap-2 flex-1 self-stretch">
+      <div className="flex  py-12 flex-col items-center gap-2 flex-1 self-stretch">
         <div
           ref={formRef}
-          className="flex-1 flex gap-6 flex-col items-start max-md:ms-0  ms-[80px] text-white"
+          className="flex-1  flex gap-6 flex-col items-start max-md:ms-0  ms-[80px] text-white"
         >
-          <div className="flex gap-3 uppercase items-center justify-start font-barlow-condensed max-md:ms-8">
+          <div className="flex gap-3  uppercase items-center justify-start font-barlow-condensed max-md:ms-8">
             <span className="opacity-25 text-lg">{SL101.count}</span>
             <h2 className="text-lg tracking-wider">{SL101.text}</h2>
           </div>
-          <div className="self-stretch min-h-[580px] flex-1 max-md:flex-col-reverse max-sm:min-h-[700px] flex gap-[32px]">
-            <div className="flex flex-1 items-center gap-8">
+          <div className="self-stretch  min-h-[580px] flex-1 max-md:flex-col-reverse max-sm:min-h-[700px] flex gap-[32px]">
+            <div className="flex flex-1  items-center gap-8">
               <div className="flex gap-8 items-start max-md:flex-col">
                 <div className="flex flex-col gap-8 max-md:my-6 items-start max-md:flex-row max-md:mx-auto">
                   {TechNumbers.map((item, index) => (

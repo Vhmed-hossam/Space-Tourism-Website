@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavElements } from "../../Constants/NavElements";
 import { NavLink } from "react-router-dom";
 import { X } from "lucide-react";
 import { Menu } from "lucide-react";
-import useNavResizing from "../../Hooks/resizingstate";
+import useNavResizing from "../../Hooks/useNavResizing";
 export default function NavBar() {
 const { Isnavsmall, isOpen, setIsOpen} = useNavResizing();
   return (
