@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { X } from "lucide-react";
 import { Menu } from "lucide-react";
 import useNavResizing from "../../Hooks/useNavResizing";
-export default function NavBar() {
+export default function Navbar() {
   const { Isnavsmall, isOpen, setIsOpen } = useNavResizing();
   return (
     <>
