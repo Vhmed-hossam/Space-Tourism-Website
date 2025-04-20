@@ -1,7 +1,7 @@
 export const planetAnimationSettings = {
-  initial: { opacity: 0, y: 70 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -70 },
+  initial: { opacity: 0, scale: 0.9 },
+  animate: { opacity: 1, scale: 1 },
+  exit: { opacity: 0, scale: 0.9 },
   transition: { duration: 0.7 },
 };
 
