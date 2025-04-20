@@ -12,18 +12,10 @@ import { MYC } from "../../static/CrewText";
 import { CrewText } from "../../Constants/CrewData";
 import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
+import useCrewStates from "../../Hooks/useCrewStates";
 
 export default function Crew() {
-  const [crewIndex, setCrewIndex] = useState(0);
-  const formRef = useRef(null);
-
-  useGSAP(() => {
-    gsap.fromTo(
-      formRef.current,
-      { opacity: 0, y: 40 },
-      { opacity: 1, duration: 0.7, ease: "power1.out", y: 0 }
-    );
-  });
+  const { crewIndex, setCrewIndex, formRef } = useCrewStates();
   return (
     <div className="bg-img3 h-auto overflow-hidden transition-all">
       <NavBar />
