@@ -36,7 +36,7 @@ export default function Navbar() {
                       className={`h-[96px] flex duration-700 flex-col hover:border-gray-500 border-b-3 transition-all items-start gap-2 justify-center border-transparent`}
                     >
                       <div>
-                        <h2 className="font-barlow-condensed text-lg tracking-wide">
+                        <h2 className="font-barlow-condensed text-lg tracking-wide uppercase">
                           {nav.count} {nav.name}
                         </h2>
                       </div>
