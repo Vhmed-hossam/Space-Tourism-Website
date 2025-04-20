@@ -71,13 +71,13 @@ export default function Navbar() {
                 <X className="size-8" />
               </button>
             </div>
-            <div className="flex  flex-col gap-8 ps-12 pe-1 text-white">
+            <div className="flex  flex-col gap-8 ps-12 text-white">
               {NavElements.map((nav) => (
                 <NavLink
                   to={nav.link}
                   key={nav.id}
                   className={({ isActive }) =>
-                    `flex flex-row justify-start align-center hover:border-gray-500 transition-all border-r-3 border-transparent duration-700 ${
+                    `flex flex-row  justify-start align-center hover:border-gray-500 transition-all border-r-3 border-transparent duration-700 ${
                       isActive ? "active-link" : "selected-link"
                     }`
                   }
