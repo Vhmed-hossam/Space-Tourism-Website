@@ -1,9 +1,9 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import Home from "../Pages/Home/home";
-import Technology from "../Pages/Technology/technology";
-import Crew from "../Pages/Crew/crew";
-import Destinations from "../Pages/Destinations/destinations";
 import Layout from "../Layout/Layout";
+import Home from "../Pages/Home/home";
+import Destinations from "../Pages/Destinations/destinations";
+import Crew from "../Pages/Crew/crew";
+import Technology from "../Pages/Technology/technology";
 
 const spaceTourism = createBrowserRouter([
   {

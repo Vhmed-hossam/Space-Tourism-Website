@@ -1,6 +1,5 @@
 import NavBar from "../../Components/Navbar/navbar";
 import "./tech.css";
-
 import { SL101, TechNumbers } from "../../static/TechnologyText";
 import { TechnologyData } from "../../Constants/TechnologyData";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,7 +11,6 @@ import useTechStates from "../../Hooks/useTechStates";
 
 export default function Technology() {
   const { Techindex, setTechindex, formRef } = useTechStates();
-
   return (
     <div className="bg-img4 h-auto overflow-hidden" loading="lazy">
       <NavBar />
@@ -54,10 +52,10 @@ export default function Technology() {
                   >
                     <motion.div className="flex flex-col items-start self-stretch gap-4">
                       <motion.h2
-                        className="text-[#8F9095] text-xl font-bellefair uppercase opacity-50 max-md:w-full max-md:text-center"
+                        className="text-[#8F9095] text-2xl font-bellefair uppercase opacity-50 max-md:w-full max-md:text-center"
                         {...textAnimationSettings}
                       >
-                        The terminology...
+                        {SL101.auto}
                       </motion.h2>
                       <motion.h1
                         className="text-4xl font-bellefair uppercase w-full max-md:text-center text-start"
