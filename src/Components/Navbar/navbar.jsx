@@ -3,21 +3,9 @@ import { NavElements } from "../../Constants/NavElements";
 import { NavLink } from "react-router-dom";
 import { X } from "lucide-react";
 import { Menu } from "lucide-react";
+import useNavResizing from "../../Hooks/resizingstate";
 export default function NavBar() {
-  const [Isnavsmall, setIsnavsmall] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 707) {
-        setIsnavsmall(true);
-      } else {
-        setIsnavsmall(false);
-      }
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+const { Isnavsmall, isOpen, setIsOpen} = useNavResizing();
   return (
     <>
       <header className="relative select-none">
