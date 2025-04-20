@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from "react";
 import { RouterProvider } from "react-router";
-import { preloadImages } from "./helpers/preloadimages";
-import { imageList } from "./Constants/imagelist";
 import Loader from "./Components/Loader/loading";
-import useNetworkStatus from "./helpers/handleNetwork";
 import Offline from "./Components/Offline/offline";
 import spaceTourism from "./Routing/spaceTourism";
+import useAppStates from "./Hooks/useAppStates";
 export default function App() {
-  const [loaded, setLoaded] = useState(false);
-  const isOnline = useNetworkStatus();
-
-  useEffect(() => {
-    preloadImages(imageList).then(() => {
-      setLoaded(true);
-    });
-  }, []);
+  const { loaded, isOnline } = useAppStates();
   if (!isOnline) {
     return <Offline />;
   }
