@@ -33,7 +33,7 @@ export default function Home() {
               <h2 className="font-barlow-condensed text-[28px] uppercase tracking-wide text-[#D0D6F9]">
                 {HomeData.subtitle}
               </h2>
-              <h1 className="font-bellefair text-[80px] uppercase md:text-[100px]">
+              <h1 className="font-bellefair text-[80px] uppercase md:text-[110px]">
                 {HomeData.title}
               </h1>
               <p className="font-barlow text-[15px] leading-[180%] text-[#D0D6F9]">
