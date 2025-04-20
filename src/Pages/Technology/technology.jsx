@@ -1,8 +1,6 @@
-import React, { useRef, useState } from "react";
 import NavBar from "../../Components/Navbar/navbar";
 import "./tech.css";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+
 import { SL101, TechNumbers } from "../../static/TechnologyText";
 import { TechnologyData } from "../../Constants/TechnologyData";
 import { motion, AnimatePresence } from "framer-motion";
@@ -25,7 +23,7 @@ export default function Technology() {
         >
           <div className="flex gap-3  uppercase items-center justify-start font-barlow-condensed max-md:ms-8">
             <span className="opacity-25 text-lg">{SL101.count}</span>
-            <h2 className="text-lg tracking-wider">{SL101.text}</h2>
+            <h2 className="text-lg tracking-widest">{SL101.text}</h2>
           </div>
           <div className="self-stretch  min-h-[580px] flex-1 max-md:flex-col-reverse max-sm:min-h-[700px] flex gap-[32px]">
             <div className="flex flex-1  items-center gap-8">

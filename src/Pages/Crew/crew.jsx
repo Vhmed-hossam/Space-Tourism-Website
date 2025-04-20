@@ -34,7 +34,7 @@ export default function Crew() {
         >
           <div className="flex gap-3 uppercase items-center justify-start font-barlow-condensed">
             <span className="opacity-25 text-lg">{MYC.count}</span>
-            <h2 className="text-lg tracking-wider">{MYC.text}</h2>
+            <h2 className="text-lg tracking-widest">{MYC.text}</h2>
           </div>
           <div className="flex self-stretch  px-0.5 flex-wrap max-md:flex-col gap-12 flex-1 items-center">
             <div className="flex-1 max-md:ps-0 max-md:py-0 max-md:text-center ps-7 self-stretch flex flex-col items-start justify-center">

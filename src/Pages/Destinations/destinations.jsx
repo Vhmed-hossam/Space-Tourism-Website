@@ -35,9 +35,9 @@ export default function Destinations() {
           className="flex flex-col flex-1 self-stretch text-white container mx-auto items-start gap-6"
           ref={formRef}
         >
-          <div className="flex gap-3 uppercase items-center justify-start font-barlow-condensed">
+          <div className="flex gap-3 uppercase items-center justify-start track font-barlow-condensed">
             <span className="opacity-25 text-lg">{PYD.count}</span>
-            <h2 className="text-lg tracking-wider">{PYD.text}</h2>
+            <h2 className="text-lg tracking-widest">{PYD.text}</h2>
           </div>
           <div className="flex self-stretch flex-wrap max-md:flex-col gap-12 flex-1 items-center">
             <div className="flex-1 self-stretch justify-center items-center flex">

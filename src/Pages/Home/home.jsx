@@ -27,9 +27,9 @@ export default function Home() {
         <div className="container mx-auto flex flex-col  px-4 sm:px-6 lg:px-10 text-white">
           <div
             ref={formRef}
-            className="flex w-full bg-red-500 flex-1 flex-col items-center justify-between gap-0 sm:mt-12 md:flex-row"
+            className="flex w-full  flex-1 flex-col items-center justify-between gap-0 sm:mt-12 md:flex-row"
           >
-            <div className="flex bg-red-400 flex-1 flex-col gap-6 text-center md:text-left">
+            <div className="flex  flex-1 flex-col gap-6 text-center md:text-left">
               <h2 className="font-barlow-condensed text-[28px] uppercase tracking-wide text-[#D0D6F9]">
                 {HomeData.subtitle}
               </h2>
@@ -42,7 +42,7 @@ export default function Home() {
             </div>
             <div
               ref={sphereRef}
-              className="flex bg-red-700 flex-1 flex-col items-center justify-center md:items-end max-md:mt-4"
+              className="flex flex-1 flex-col items-center justify-center md:items-end max-md:mt-4"
             >
               <Sphere />
             </div>
